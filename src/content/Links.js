@@ -5,7 +5,7 @@ export default [
     },
     {
         name: "Binary Basics",
-        route: "#"
+        route: "/binary"
     },
     {
         name: "Etc",

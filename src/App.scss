@@ -7,9 +7,10 @@
     top: 0;
     right: 0;
     min-height: 100%;
+    color: $color-darkest;
 
     .content {
-        background-color: $color-light;
+        background-color: $color-lightest;
         margin: 30px;
         border-radius: 10px;
     }

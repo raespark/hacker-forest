@@ -1,5 +1,14 @@
 @import "components/variables.scss";
 
 .App {
-    padding-left: $sidebar-width;
+    background-color: $color-dark;
+    position: absolute;
+    left: $sidebar-width;
+    top: 0;
+
+    .content {
+        background-color: $color-light;
+        margin: 30px;
+        border-radius: 10px;
+    }
 }

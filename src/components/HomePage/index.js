@@ -4,10 +4,10 @@ import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import gameStates from 'content/GameStates';
 
-import StartGame from './StartGame/StartGame';
-import GameRunning from './GameRunning/GameRunning';
+import StartGame from './StartGame';
+import GameRunning from './GameRunning';
 
-import "./homepage.scss";
+import "./HomePage.scss";
 
 const mapStateToProps = ({ gameState: { collectedFlags, currentGameState } }) => ({
     collectedFlags,

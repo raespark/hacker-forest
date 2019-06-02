@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icofont from 'react-icofont';
 
-import utils from 'utils';
+import utils from 'Utils';
 import classnames from 'classnames';
 
 import './Flags.scss';

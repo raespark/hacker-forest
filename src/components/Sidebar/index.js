@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import * as actions from 'actions';
 
@@ -39,7 +40,7 @@ const Sidebar = (props) => {
             </div>
             <div className="section links">
                 <ul>
-                    {Links.map(link => <li key={link.name}><a href={link.route}>{link.name}</a></li>)}
+                    {Links.map(link => <li key={link.name}><Link to={link.route}>{link.name}</Link></li>)}
                 </ul>
             </div>
             <div className="section tools">

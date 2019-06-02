@@ -8,11 +8,9 @@ import Icofont from 'react-icofont';
 import TreeSvg from './tree';
 import Links from 'content/links';
 import Tools from 'content/tools';
-import Timer from './timer';
-import Flags from './flags';
+import Timer from 'components/Timer';
+import Flags from 'components/Flags';
 import './sidebar.scss';
-
-import utils from 'utils';
 
 const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription }, gameState: {collectedFlags, musicEnabled} }) => ({
     hasToolEnabled,
@@ -30,7 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
 const Sidebar = (props) => {
     const musicTool = {
         name: props.musicEnabled ? "Mute Music" : "Unmute Music",
-        description: props.musicEnabled ? "Mute the background music" : "Unmute the background music.\n(If you still can't hear it, you may need to enable autoplaying music in your browser.)",
+        description: props.musicEnabled ? "Mute the background music" : "Unmute the background music.",
         icon: props.musicEnabled ? "volume-down" : "volume-off"
     }
 
@@ -73,10 +71,8 @@ const Sidebar = (props) => {
                     <p>{props.toolDescription}</p>
                 </div>
             </div>
-            <Flags collectedFlags={props.collectedFlags}/>
-            <div className="section timer">
-                <Timer/>
-            </div>
+            <Flags className="section" collectedFlags={props.collectedFlags}/>
+            <Timer className="section" />
 
         </div>
     );

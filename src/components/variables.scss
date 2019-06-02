@@ -11,3 +11,10 @@ $color-background-dark: black;
 // Sidebar
 $sidebar-color: $color-background-dark;
 $sidebar-width: 300px;
+
+// Animations
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

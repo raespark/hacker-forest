@@ -1,0 +1,21 @@
+@import "components/variables.scss";
+
+.flags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: $color-dark;
+
+    .flag.active {
+        color: $color-default;
+    }
+
+    .flag.special {
+        display: none;
+        color: $color-yellow;
+
+        &.active {
+            display: block;
+        }
+    }
+}

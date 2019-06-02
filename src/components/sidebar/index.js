@@ -8,13 +8,18 @@ import Icofont from 'react-icofont';
 import TreeSvg from './tree';
 import Links from 'content/links';
 import Tools from 'content/tools';
+import Timer from './timer';
 import './sidebar.scss';
 
-const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription } }) => ({
+import utils from 'utils';
+
+const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription }, gameState: {collectedFlags, musicEnabled} }) => ({
     hasToolEnabled,
     currentTool,
     toolName,
-    toolDescription
+    toolDescription,
+    collectedFlags,
+    musicEnabled
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -22,6 +27,12 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const Sidebar = (props) => {
+    const musicTool = {
+        name: props.musicEnabled ? "Mute Music" : "Unmute Music",
+        description: props.musicEnabled ? "Mute the background music" : "Unmute the background music.\n(If you still can't hear it, you may need to enable autoplaying music in your browser.)",
+        icon: props.musicEnabled ? "volume-down" : "volume-off"
+    }
+
     return (
         <div className="sidebar">
             <div className="section title">
@@ -47,6 +58,14 @@ const Sidebar = (props) => {
                             <Icofont icon={tool.icon} size="3" />
                         </div>
                     )}
+                    <div key={musicTool.name}
+                        className={classnames("tool")}
+                        title={musicTool.name}
+                        onMouseOver={() => { props.actions.showToolDescription(musicTool) }}
+                        onMouseOut={() => { props.actions.hideToolDescription() }}
+                        onClick={() => { props.actions.toggleMuteMusic() }}>
+                        <Icofont icon={musicTool.icon} size="3" />
+                    </div>
                 </div>
                 <div className="tool-description">
                     <h2>{props.toolName}</h2>
@@ -54,27 +73,19 @@ const Sidebar = (props) => {
                 </div>
             </div>
             <div className="section flags">
-                <div className="flag active">
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-                <div className="flag active">
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-                <div className="flag inactive">
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-                <div className="flag inactive">
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-                <div className="flag inactive">
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-                <div className="flag inactive">
+                {
+                    utils.range(5).map(i => 
+                        <div key={`flag-${i}`} className={classnames("flag", {active:props.collectedFlags > i})}>
+                            <Icofont icon="flag-alt-1" size="2" />
+                        </div>
+                    )
+                }
+                <div className={classnames("flag", "special", {active: props.collectedFlags === 6})}>
                     <Icofont icon="flag-alt-1" size="2" />
                 </div>
             </div>
             <div className="section timer">
-                <h1>10<span className="colon"></span>00</h1>
+                <Timer/>
             </div>
 
         </div>

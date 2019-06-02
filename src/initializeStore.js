@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/all';
+import timerMiddleware from 'middleware/timerMiddleware';
 import reduxPromise from 'redux-promise';
 
 const loadState = () => {
@@ -25,8 +26,11 @@ const saveState = (partialState) => {
 }
 
 const createSavableState = (fullState) => {
+    let {gameState} = fullState;
     // Only save the portions of the state we care about
-    return {}
+    return {
+        gameState
+    }
 }
 
 export default function initializeStore() {
@@ -36,7 +40,7 @@ export default function initializeStore() {
     const store = createStore(
         allReducers,
         preloadedState,
-        composeEnhancers(applyMiddleware(reduxPromise))
+        composeEnhancers(applyMiddleware(reduxPromise, timerMiddleware))
     );
 
     // Save to local storage after each update

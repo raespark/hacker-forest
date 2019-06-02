@@ -72,6 +72,8 @@
             flex: 1 0 auto;
             display:flex;
             flex-direction: row;
+            justify-content: space-evenly;
+
         }
 
         .tool-description {
@@ -82,6 +84,7 @@
         .tool {
             margin: 10px;
             text-align:center;
+            height: 3rem;
 
             &.active i, i:hover{
                 background-color: $color-default;
@@ -120,13 +123,19 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-
-        .flag.inactive {
-            color: $color-dark;
-        }
+        color: $color-dark;
 
         .flag.active {
             color: $color-default;
+        }
+
+        .flag.special {
+            display: none;
+            color: $color-yellow;
+
+            &.active {
+                display: block;
+            }
         }
     }
 

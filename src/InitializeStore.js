@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import allReducers from './reducers/all';
-import timerMiddleware from 'middleware/timerMiddleware';
+import allReducers from './reducers/All';
+import timerMiddleware from 'middleware/TimerMiddleware';
 import reduxPromise from 'redux-promise';
 
 const loadState = () => {

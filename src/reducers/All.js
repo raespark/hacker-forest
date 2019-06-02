@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import gameState from './gameStateReducer';
-import tools from './toolsReducer';
+import gameState from './GameStateReducer';
+import tools from './ToolsReducer';
 
 export default combineReducers({
     gameState,

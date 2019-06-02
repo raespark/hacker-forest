@@ -5,12 +5,12 @@ import classnames from 'classnames';
 import * as actions from 'actions';
 
 import Icofont from 'react-icofont';
-import TreeSvg from './tree';
-import Links from 'content/links';
-import Tools from 'content/tools';
+import TreeSvg from './Tree';
+import Links from 'content/Links';
+import Tools from 'content/Tools';
 import Timer from 'components/Timer';
 import Flags from 'components/Flags';
-import './sidebar.scss';
+import './Sidebar.scss';
 
 const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription }, gameState: {collectedFlags, musicEnabled} }) => ({
     hasToolEnabled,

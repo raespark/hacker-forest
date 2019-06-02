@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import {timerStart} from 'actions';
 
-import initializeStore from './initializeStore';
+import initializeStore from './InitializeStore';
 
 let store = initializeStore();
 store.dispatch(timerStart());

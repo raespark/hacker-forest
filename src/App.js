@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import Home from 'components/homepage';
-import SideBar from 'components/sidebar';
-import Music from 'components/music';
+import Home from 'components/HomePage';
+import SideBar from 'components/Sidebar';
+import Music from 'components/Music';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {

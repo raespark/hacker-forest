@@ -2,15 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
+import gameStates from 'content/GameStates';
 
 import StartGame from './StartGame/StartGame';
 import GameRunning from './GameRunning/GameRunning';
 
 import "./homepage.scss";
 
-const mapStateToProps = ({ gameState: {collectedFlags ,isGameActive}}) => ({
+const mapStateToProps = ({ gameState: { collectedFlags, currentGameState } }) => ({
     collectedFlags,
-    isGameActive
+    currentGameState
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -20,8 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
 const HomePage = (props) => {
     return <div className="home">
         <div className="content">
-            {!props.isGameActive && <StartGame startGame={props.actions.startGame}/>}
-            {props.isGameActive && <GameRunning collectedFlags={props.collectedFlags}/>}
+            {props.currentGameState === gameStates.NOT_STARTED && <StartGame startGame={props.actions.startGame}/>}
+            {props.currentGameState === gameStates.RUNNING && <GameRunning collectedFlags={props.collectedFlags}/>}
         </div>
     </div>
 }

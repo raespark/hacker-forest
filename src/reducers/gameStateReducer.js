@@ -1,8 +1,9 @@
 import { handleActions } from 'redux-actions';
 import * as actions from 'actions';
+import GameStates from 'content/GameStates';
 
 const defaultState = {
-    isGameActive: false,
+    currentGameState: GameStates.NOT_STARTED,
     timeRemaining: 0,
     collectedFlags: 0,
     musicEnabled: false
@@ -12,7 +13,7 @@ export default handleActions({
     [actions.startGame](state) {
         return {
             ...state,
-            isGameActive: true,
+            currentGameState: GameStates.RUNNING,
             timeRemaining: 30,
             collectedFlags: 0
         }
@@ -20,7 +21,7 @@ export default handleActions({
     [actions.finishGame](state) {
         return {
             ...state,
-            isGameActive: false,
+            currentGameState: GameStates.WON,
             timeRemaining: 0,
         }
     },
@@ -40,7 +41,7 @@ export default handleActions({
     [actions.timerFinished](state) {
         return {
             ...state,
-            isGameActive: false,
+            currentGameState: GameStates.LOST,
             timeRemaining: 0,
         }
     },

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../Button/Button';
+import Button from 'components/Button';
 
 import "./StartGame.scss";
 
@@ -13,7 +13,7 @@ const StartGame = (props) => {
         <p>
             {
                 'Your mission is to '} <span className="underlined">{'find all the flags'}</span>{' hidden accross ' +
-                'the sites provided to you. We\'ve been able to conceal your presence from trackers, but you\'ll only have '} <span className="underlined">{'10 minutes,'}</span>{' before your cover is be compromised.'
+                'the sites provided to you. We\'ve been able to conceal your presence from trackers, but you\'ll only have '} <span className="underlined">{'10 minutes,'}</span>{' before your cover is compromised.'
             }
         </p>
         <p> 
@@ -22,9 +22,9 @@ const StartGame = (props) => {
             } 
         </p>
         <ul>
-                <li><span className="underlined">{'Zapper'}</span> {': The zapper (or lightning bolt) can be used to zap specific parts of sites trying to hide dirty secrets where no scrollbar can reach. '}</li>
+                <li><span className="underlined">{'ZAPPER'}</span> {': The zapper (or lightning bolt) can be used to zap specific parts of sites trying to hide dirty secrets where no scrollbar can reach. '}</li>
                 <li><span className="underlined">{'SCREWDRIVER'}</span> {': The screwdriver can be used to loosen up certain places to find what lies within. '}</li>
-                <li><span className="underlined">{'TUNES'}</span> {': The most important tool of all, you can mute or unmute some bumpin tunes to help get you in the'} <i>{'zone.'}</i></li>
+                <li><span className="underlined">{'TUNES'}</span> {': The most important tool of all, you can mute or unmute some bumpin tunes to help get you in the'} <i>{'zone.'}</i> {'(If you can\'t hear it, you may need to enable autoplaying music in your browser.)'}</li>
         </ul>
         
         <p className="subtitle">
@@ -32,7 +32,7 @@ const StartGame = (props) => {
         </p>
         <br/>
         <br/>
-        <div>{'Whenever you\'re ready to begin. Press the start button below.'}</div>
+        <div>{'Whenever you\'re ready to begin press the start button below.'}</div>
         <p>{'Good luck agent.'}</p>
         <Button className="start-game-button" label="START" onClick={props.startGame}/>
     </div>

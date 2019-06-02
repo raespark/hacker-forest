@@ -1,21 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from 'actions';
+
+import StartGame from './StartGame/StartGame';
+import GameRunning from './GameRunning/GameRunning';
+
 import "./homepage.scss";
 
-export default () => {
+const mapStateToProps = ({ gameState: {collectedFlags ,isGameActive}}) => ({
+    collectedFlags,
+    isGameActive
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    actions: bindActionCreators(actions, dispatch)
+})
+
+const HomePage = (props) => {
     return <div className="home">
-        <header className="header">
-            <img src={logo} className="logo" alt="logo" />
-            <p>
-                Edit <code>src/App.js</code> and save to reload.
-        </p>
-            <a
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                I loaded this via a route!
-        </a>
-        </header>
+        <div className="content">
+            {!props.isGameActive && <StartGame startGame={props.actions.startGame}/>}
+            {props.isGameActive && <GameRunning collectedFlags={props.collectedFlags}/>}
+        </div>
     </div>
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

@@ -1,6 +1,6 @@
 export default [
     {   
-        name: "Laser",
+        name: "Zapper",
         icon: "flash",
         description: "Zaps things off of the website"
     },

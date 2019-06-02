@@ -9,6 +9,7 @@ import TreeSvg from './tree';
 import Links from 'content/links';
 import Tools from 'content/tools';
 import Timer from './timer';
+import Flags from './flags';
 import './sidebar.scss';
 
 import utils from 'utils';
@@ -72,18 +73,7 @@ const Sidebar = (props) => {
                     <p>{props.toolDescription}</p>
                 </div>
             </div>
-            <div className="section flags">
-                {
-                    utils.range(5).map(i => 
-                        <div key={`flag-${i}`} className={classnames("flag", {active:props.collectedFlags > i})}>
-                            <Icofont icon="flag-alt-1" size="2" />
-                        </div>
-                    )
-                }
-                <div className={classnames("flag", "special", {active: props.collectedFlags === 6})}>
-                    <Icofont icon="flag-alt-1" size="2" />
-                </div>
-            </div>
+            <Flags collectedFlags={props.collectedFlags}/>
             <div className="section timer">
                 <Timer/>
             </div>

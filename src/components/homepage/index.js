@@ -21,7 +21,7 @@ const HomePage = (props) => {
     return <div className="home">
         <div className="content">
             {!props.isGameActive && <StartGame startGame={props.actions.startGame}/>}
-            {props.isGameActive && <GameRunning flagsRemaining={Math.max(5 - props.collectedFlags, 0)}/>}
+            {props.isGameActive && <GameRunning collectedFlags={props.collectedFlags}/>}
         </div>
     </div>
 }

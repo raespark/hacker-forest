@@ -1,3 +1,6 @@
 import {combineReducers} from 'redux';
+import tools from './toolsReducer';
 
-export default combineReducers({});
+export default combineReducers({
+    tools
+});

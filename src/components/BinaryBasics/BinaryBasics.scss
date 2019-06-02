@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.binary-basics {
+  padding: 20px;
+  font-family: 'Nova flat', monospace;
+  font-size: 20px;
+  text-align: justify;
+
+  .bordered-area {
+    border: 1px solid $color-accent;
+  }
+
+  .header {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .body {
+    padding: 0 50px 20px 50px;
+
+    h3 {
+      font-size: 25px;
+      margin-top: 50px;
+      text-decoration: underline;
+    }
+
+    .clue {
+      color: $color-accent;
+      font-weight: bold;
+    }
+
+    .example{
+      text-align: center;
+      color: $color-dark;
+      font-size: 25px;
+      font-weight: bold;
+    };
+  }
+}

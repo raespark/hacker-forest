@@ -1,5 +1,9 @@
 export default [
     {
+        name: "Home",
+        route: "/"
+    },
+    {
         name: "Binary Basics",
         route: "#"
     },

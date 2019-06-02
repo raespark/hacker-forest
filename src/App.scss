@@ -5,8 +5,8 @@
     position: absolute;
     left: $sidebar-width;
     top: 0;
+    right: 0;
     min-height: 100%;
-    min-width: auto;
 
     .content {
         background-color: $color-light;

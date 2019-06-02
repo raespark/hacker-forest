@@ -1,0 +1,71 @@
+@import "../../variables.scss";
+
+.game-running {
+  padding: 20px 50px;
+  margin: 10px 0;
+  background-color: black;
+  color: $color-default;
+  border-radius: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .return-with-flags {
+    flex: 0 0 100%;
+  }
+
+  .flags {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: $color-dark;
+    margin: 0 100px;
+
+    .flag.active {
+        color: $color-default;
+    }
+
+    .flag.special {
+        display: none;
+        color: $color-yellow;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+  .remaining-flags {
+    flex: 0 0 100%;
+    margin: 100px 50px;
+  }
+
+  .end-game-button {
+      flex: 0 0 40%;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 10px;
+      margin: 0 20%;
+  }
+
+  .timer {
+    font-size: 2rem;
+    font-family: "Segment7Standard", "Courier New", Courier, monospace;
+    .colon {
+        display: inline-block;
+        position: relative;
+        top: -0.4rem;
+        width: 0.3rem;
+        height: 1.6rem;
+        margin: auto 0.4rem;
+        border-top: 0.3rem solid $color-default;
+        border-bottom: 0.3rem solid $color-default;
+
+        animation: blink 1s step-start 0s infinite;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../variables.scss";
+
+.button {
+  background-color: $color-default;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.disabled {
+    background-color: $color-dark;
+    color: gray;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.start-game {
+  .header {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: $color-default;
+    background-color: black;
+  }
+
+  .body {
+    padding: 20px 50px;
+    background-color: black;
+    color: $color-default;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+
+    .underlined {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    ul {
+        text-align: left;
+        li {
+            padding: 5px 0;
+        }
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .start-game-button {
+        font-weight: bold;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+  }
+}

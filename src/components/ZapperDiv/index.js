@@ -8,21 +8,21 @@ const mapStateToProps = ({ tools: { hasToolEnabled, currentTool } }) => ({
     currentTool
 });
 
-const onZapperDivClick = (hasToolEnabled, currentTool, onZap) => {
-    if (hasToolEnabled && currentTool.name === "Zapper" && typeof(onZap) === 'function') {
+const onZapperDivClick = (hasToolEnabled, currentTool, enabled, onZap) => {
+    if (enabled && hasToolEnabled && currentTool.name === "Zapper" && typeof(onZap) === 'function') {
         onZap();
     }
 }
 
 const ZapperDiv = (props) => {
-    const { className, children, onClick, onZap, hasToolEnabled, currentTool, dispatch, ...rest } = props;
+    const { enabled, className, children, onClick, onZap, hasToolEnabled, currentTool, dispatch, ...rest } = props;
 
     const memoizedOnClick = useCallback(
         (...args) => {
-            onZapperDivClick(hasToolEnabled, currentTool, onZap);
+            onZapperDivClick(hasToolEnabled, currentTool, enabled, onZap);
             if (typeof (onClick) === 'function') { onClick(...args) };
         },
-        [hasToolEnabled, currentTool, onClick, onZap]
+        [hasToolEnabled, currentTool, enabled, onClick, onZap]
     )
 
     return (

@@ -5,5 +5,19 @@
     font-family: "Courier New", Courier, monospace;
     .content {
         padding: 20px;
+
+        .link {
+            color: $color-dark;
+            font-size: 20px;
+            
+            &:visited {
+              color: $color-darkest;
+            }
+      
+            &:hover {
+              font-weight: bold;
+              color: $color-accent;
+            }
+          }
     }
 }

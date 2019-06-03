@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
@@ -31,6 +32,7 @@ const HomePage = (props) => {
             {(props.currentGameState === gameStates.WON || props.currentGameState === gameStates.LOST) && 
                 <GameEnd/>
             }
+            <Link className="link" to="/credits">{'Credits'}</Link>
         </div>
     </div>
 }

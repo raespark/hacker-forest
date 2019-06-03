@@ -13,6 +13,7 @@ import GhostTown from 'components/GhostTown';
 import Encode from 'components/Encode';
 import PetParade from 'components/PetParade';
 import BrightBulb from 'components/BrightBulbs';
+import Credits from 'components/HomePage/Credits';
 
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
@@ -37,7 +38,6 @@ function App(props) {
         <div className="App">
           <ToolContainer>
             <Route exact path="/" component={Home} />
-
             <ProtectedRoute exact authed={isGameRunning} path="/binary" component={BinaryBasics}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks" component={LifeHacks}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks/read-more" component={ReadMore}/>
@@ -45,6 +45,7 @@ function App(props) {
             <ProtectedRoute exact authed={isGameRunning} path="/encode" component={Encode}/>
             <ProtectedRoute exact authed={isGameRunning} path="/petparade" component={PetParade}/>
             <ProtectedRoute exact authed={isGameRunning} path="/brightbulbs" component={BrightBulb}/>
+            <Route exact path="/credits" component={Credits}/>
           </ToolContainer>
           <FlagPopup />
         </div>

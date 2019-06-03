@@ -8,23 +8,27 @@ export default [
         route: "/binary"
     },
     {
-        name: "Etc",
+        name: "Life Hacks",
+        route: "/lifehacks"
+    },
+    {
+        name: "Safe n' Sound",
         route: "#"
     },
     {
-        name: "Other Page #1",
+        name: "Ghost Town",
         route: "#"
     },
     {
-        name: "Fake Website",
+        name: "Bright Bulbs",
         route: "#"
     },
     {
-        name: "TEMPLATE",
+        name: "Pet Parade",
         route: "#"
     },
     {
-        name: "Other Page #2",
+        name: "Encode",
         route: "#"
     },
 ]

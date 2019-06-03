@@ -11,11 +11,17 @@
             flex: 1 0 auto;
             resize: none;
             margin: 20px;
-            border: 1px solid $color-default;
-            color: $color-default;
-            background-color: $color-darkest;
+            border: 1px solid $color-dark;
+            color: $color-darkest;
+            background-color: $color-light;
             border-radius: 4px;
             padding: 10px;
+            font-size: 18px;
+            
+            &::placeholder {
+                color: $color-dark;
+                font-size: 18px;
+            }
         }
 
         .translator-buttons {

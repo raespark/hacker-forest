@@ -17,7 +17,7 @@ import './App.scss';
 
 function App() {
   return (
-    <Router onUpdate={() => window.scrollTo(0, 0)}>
+    <Router>
       <Music src="misuse-by-kevin-macleod.ogg" />
       <SideBar />
       <ScrollToTop>

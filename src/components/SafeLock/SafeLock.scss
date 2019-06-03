@@ -1,0 +1,17 @@
+@import "components/variables.scss";
+
+.safe-lock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .digit {
+        font-size:2rem;
+        font-weight:bold;
+    }
+
+    .digit-up:hover, .digit-down:hover {
+        cursor: pointer;
+        color: $color-light;
+    }
+}

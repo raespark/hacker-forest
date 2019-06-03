@@ -6,6 +6,7 @@ import * as actions from 'actions';
 import ScrewdriverDiv from 'components/ScrewdriverDiv';
 import DraggableDiv from 'components/Draggable/DraggableDiv';
 import DroppableDiv from 'components/Draggable/DroppableDiv';
+import PasswordBox from 'components/PasswordBox';
 
 import './BrightBulbs.scss';
 
@@ -36,6 +37,7 @@ class BrightBulbs extends Component {
     this.handleScrew = this.handleScrew.bind(this);
     this.handleLampClicked = this.handleLampClicked.bind(this);
     this.handleLampDrop = this.handleLampDrop.bind(this);
+    this.handlePasswordEntered = this.handlePasswordEntered.bind(this);
   }
 
   handleScrew() {
@@ -49,7 +51,7 @@ class BrightBulbs extends Component {
       this.setState({lampState});
       let checkLampState = true;
       lampState.forEach((lamp, i) => {
-        if(lamp !== this.state.correctLampState[i]){
+        if(lamp !== this.correctLampState[i]){
           checkLampState = false;
         }
       });
@@ -66,6 +68,11 @@ class BrightBulbs extends Component {
       this.props.actions.lampFixedBrightBulb();
       this.setState({lampFixed: true});
     }
+  }
+
+  handlePasswordEntered() {
+    this.props.actions.finishedBrightBulbMessage();
+    this.props.actions.collectFlag();
   }
 
   render () {
@@ -112,6 +119,19 @@ class BrightBulbs extends Component {
               <img draggable="false" className="lamp" src={this.state.lampState[5] ? 'lampOn.png' : 'lampOff.png' } alt="lamp off"/>
             </div>
           </div>
+          <p>Our lamps will be the</p>
+          <p className="highlight">HIGHLIGHT</p>
+          <p>of any room!</p>
+          <p className="invisible">All your base are 64<br />Q2xpY2sgb24gYWxsIHRoZSBDYXRz</p>
+          <p>You’ll find yourself positively delighted about our quality, selection, and prices!</p>
+          <p className="small">Unfortunately, our store is not currently open for orders.</p>
+          <p className="small">But if you’d like to send us a message, it would not only light up our day, but we’ll also try to get back to you as soon as we can. Much love to our loving and supportive Bright Bulbs!</p>
+          <PasswordBox 
+            className="message" 
+            multiline={true} 
+            enabled={!this.props.brightBulbMessageCompleted}
+            password={'How do you greet a lamp? “WATT’s goin on!”'}
+            correctPasswordEntered={this.handlePasswordEntered}/>
         </div>
       </div>
     )}

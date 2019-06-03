@@ -6,6 +6,7 @@ import gameStates from 'content/GameStates';
 
 import StartGame from './StartGame';
 import GameRunning from './GameRunning';
+import GameEnd from './GameEnd';
 
 import "./HomePage.scss";
 
@@ -21,8 +22,15 @@ const mapDispatchToProps = (dispatch) => ({
 const HomePage = (props) => {
     return <div className="home">
         <div className="content">
-            {props.currentGameState === gameStates.NOT_STARTED && <StartGame startGame={props.actions.startGame}/>}
-            {props.currentGameState === gameStates.RUNNING && <GameRunning collectedFlags={props.collectedFlags}/>}
+            {props.currentGameState === gameStates.NOT_STARTED && 
+            <StartGame startGame={props.actions.startGame}/>
+            }
+            {props.currentGameState === gameStates.RUNNING && 
+                <GameRunning collectedFlags={props.collectedFlags}/>
+            }
+            {(props.currentGameState === gameStates.WON || props.currentGameState === gameStates.LOST) && 
+                <GameEnd/>
+            }
         </div>
     </div>
 }

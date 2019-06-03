@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.game-running {
+.game-end {
   padding: 20px 50px;
   margin: 10px 0;
   background-color: black;
@@ -8,10 +8,7 @@
   border-radius: 10px;
   font-weight: normal;
   font-size: 18px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
 
   .return-with-flags {
     flex: 0 0 100%;
@@ -44,7 +41,7 @@
     margin: 100px 50px;
   }
 
-  .end-game-button {
+  .replay-button {
       flex: 0 0 40%;
       font-weight: bold;
       font-size: 30px;

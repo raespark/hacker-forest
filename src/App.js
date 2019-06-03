@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollToTop from 'components/ScrollToTop';
 
 import Home from 'components/HomePage';
 import BinaryBasics from 'components/BinaryBasics';
@@ -19,16 +20,16 @@ function App() {
     <Router onUpdate={() => window.scrollTo(0, 0)}>
       <Music src="misuse-by-kevin-macleod.ogg" />
       <SideBar />
-      <div className="App">
-        <ToolContainer>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/binary" component={BinaryBasics}/>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/binary" component={BinaryBasics}/>
-          <Route exact path="/lifehacks" component={LifeHacks}/>
-          <Route exact path="/lifehacks/read-more" component={ReadMore}/>
-        </ToolContainer>
-      </div>
+      <ScrollToTop>
+        <div className="App">
+          <ToolContainer>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/binary" component={BinaryBasics}/>
+            <Route exact path="/lifehacks" component={LifeHacks}/>
+            <Route exact path="/lifehacks/read-more" component={ReadMore}/>
+          </ToolContainer>
+        </div>
+      </ScrollToTop>
     </Router>
   );
 }

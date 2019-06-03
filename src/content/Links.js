@@ -4,32 +4,32 @@ export default [
         route: "/"
     },
     {
-        name: "Binary Basics",
-        route: "/binary"
-    },
-    {
         name: "Life Hacks",
         route: "/lifehacks"
     },
     {
         name: "Safe n' Sound",
-        route: "#"
+        route: "/safensound"
     },
     {
         name: "Ghost Town",
-        route: "#"
+        route: "/ghosttown"
     },
     {
         name: "Bright Bulbs",
-        route: "#"
+        route: "/brightbulbs"
+    },
+    {
+        name: "Binary Basics",
+        route: "/binary"
     },
     {
         name: "Pet Parade",
-        route: "#"
+        route: "/petparade"
     },
     {
         name: "Encode",
-        route: "#"
+        route: "/encode"
     },
 ]
 

@@ -7,7 +7,7 @@ import "./Button.scss";
 const Button = (props) => {
   return <div
             className={classnames('button', {disabled: props.disabled}, props.className)}
-            onClick={props.onClick}>
+            onClick={props.disabled? () => {} :  props.onClick}>
             {props.label}
         </div>
 }

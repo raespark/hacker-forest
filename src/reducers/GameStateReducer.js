@@ -6,7 +6,8 @@ const defaultState = {
     currentGameState: GameStates.NOT_STARTED,
     timeRemaining: 0,
     collectedFlags: 0,
-    musicEnabled: false
+    musicEnabled: false,
+    ghostTownCompleted: false
 }
 
 export default handleActions({
@@ -49,6 +50,12 @@ export default handleActions({
         return {
             ...state,
             musicEnabled: !state.musicEnabled
+        }
+    },
+    [actions.finishedGhostTown] (state) {
+        return {
+            ...state,
+            ghostTownCompleted: !state.finishedGhostTown
         }
     }
 }, defaultState);

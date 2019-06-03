@@ -4,8 +4,10 @@ export const toggleTool = createAction("TOGGLE_TOOL", (tool) => ({tool}));
 export const showToolDescription = createAction("SHOW_TOOL_DESCRIPTION", (tool) => ({name: tool.name, description: tool.description}));
 export const hideToolDescription = createAction("HIDE_TOOL_DESCRIPTION");
 
+export const restartGame = createAction("RESTART_GAME");
 export const startGame = createAction("START_GAME");
 export const finishGame = createAction("FINISH_GAME");
+export const giveUpGame = createAction("GIVE_UP_GAME");
 
 export const timerStart = createAction("TIMER_START");
 export const timerTick = createAction("TIMER_TICK");

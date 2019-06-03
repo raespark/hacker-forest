@@ -13,6 +13,9 @@ const defaultState = {
 }
 
 export default handleActions({
+    [actions.restartGame](state) {
+        return Object.assign({}, defaultState);
+    },
     [actions.startGame](state) {
         return {
             ...state,
@@ -24,8 +27,13 @@ export default handleActions({
     [actions.finishGame](state) {
         return {
             ...state,
-            currentGameState: GameStates.WON,
-            timeRemaining: 0,
+            currentGameState: GameStates.WON
+        }
+    },
+    [actions.giveUpGame](state) {
+        return {
+            ...state,
+            currentGameState: GameStates.LOST
         }
     },
     [actions.collectFlag](state) {

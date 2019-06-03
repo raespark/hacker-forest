@@ -52,6 +52,7 @@
         .hack-image {
           margin: 0 auto;
           max-height: 400px;
+          max-width: 100%;
         }
       }
 
@@ -62,13 +63,14 @@
 
       .read-more {
         text-align: center;
-        color: $color-accent;
+        color: $color-dark;
 
         .read-more-link:hover{
-          color: $color-dark;
+          color: $color-darkest;
+          font-weight: bold;
         }
         .read-more-link:visited {
-          color: $color-default;
+          color: $color-accent;
         }
       }
     }

@@ -12,19 +12,23 @@ export default [
         route: "/lifehacks"
     },
     {
-        name: "Other Page #1",
+        name: "Safe n' Sound",
         route: "#"
     },
     {
-        name: "Fake Website",
+        name: "Ghost Town",
         route: "#"
     },
     {
-        name: "TEMPLATE",
+        name: "Bright Bulbs",
         route: "#"
     },
     {
-        name: "Other Page #2",
+        name: "Pet Parade",
+        route: "#"
+    },
+    {
+        name: "Encode",
         route: "#"
     },
 ]

@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers/All';
 import timerMiddleware from 'middleware/TimerMiddleware';
 import reduxPromise from 'redux-promise';
+import FlagPopupMiddleware from 'middleware/FlagPopupMiddleware';
 
 const loadState = () => {
     try {
@@ -40,7 +41,7 @@ export default function initializeStore() {
     const store = createStore(
         allReducers,
         preloadedState,
-        composeEnhancers(applyMiddleware(reduxPromise, timerMiddleware))
+        composeEnhancers(applyMiddleware(reduxPromise, timerMiddleware, FlagPopupMiddleware))
     );
 
     // Save to local storage after each update

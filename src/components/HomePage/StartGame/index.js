@@ -12,13 +12,13 @@ const StartGame = (props) => {
     <div className="body">
         <p>
             {
-                'Your mission is to '} <span className="underlined">{'find all the flags'}</span>{' hidden accross ' +
+                'Your mission is to '} <span className="underlined">{'find all the flags'}</span>{' hidden across ' +
                 'the sites provided to you. We\'ve been able to conceal your presence from trackers, but you\'ll only have '} <span className="underlined">{'10 minutes,'}</span>{' before your cover is compromised.'
             }
         </p>
         <p> 
             {
-                'There are a number of tools available to you, which you can see on your hacker-forest tool bar to the left. Each tool serves a specific purpose.'
+                'There are a number of tools available to you, which you can see on your hacker-forest toolbar to the left. Each tool serves a specific purpose.'
             } 
         </p>
         <ul>

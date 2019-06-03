@@ -14,3 +14,6 @@ export const timerFinished = createAction("TIMER_FINISHED");
 export const collectFlag = createAction("COLLECT_FLAG");
 
 export const toggleMuteMusic = createAction("TOGGLE_MUTE_MUSIC");
+
+export const showFlagPopup = createAction("SHOW_FLAG_POPUP");
+export const hideFlagPopup = createAction("HIDE_FLAG_POPUP");

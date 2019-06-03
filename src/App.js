@@ -8,6 +8,7 @@ import ReadMore from 'components/LifeHacks/ReadMore';
 
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
+import FlagPopup from 'components/FlagPopup';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import ToolContainer from 'components/ToolContainer';
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/lifehacks" component={LifeHacks}/>
             <Route exact path="/lifehacks/read-more" component={ReadMore}/>
           </ToolContainer>
+          <FlagPopup />
         </div>
       </ScrollToTop>
     </Router>

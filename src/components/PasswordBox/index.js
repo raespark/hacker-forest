@@ -21,9 +21,6 @@ class PasswordBox extends Component {
   }
 
   checkPassword() {
-    console.log(this.state.input);
-    console.log(this.props.password);
-    console.log(this.state.input.trim() === this.props.password.trim())
     if(this.state.input.trim() === this.props.password.trim()) {
       this.props.correctPasswordEntered();
     }

@@ -19,3 +19,5 @@ export const showFlagPopup = createAction("SHOW_FLAG_POPUP");
 export const hideFlagPopup = createAction("HIDE_FLAG_POPUP");
 
 export const finishedGhostTown = createAction("FINISHED_GHOST_TOWN");
+export const finishedPetParadeCats = createAction("FINISHED_PET_PARADE_CATS");
+export const finishedPetParadePassword = createAction("FINISHED_PET_PARADE_PASSWORD");

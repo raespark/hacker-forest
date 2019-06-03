@@ -1,0 +1,37 @@
+@import '../Variables.scss';
+
+.pet-parade {
+  text-align: center;
+  padding: 50px;
+
+  .header {
+    padding: 30px;
+
+    .logo {
+      max-width: 400px;
+    }
+  }
+
+  .body {
+    background-color: $color-light;
+    border-radius: 10px;
+
+    .pets {
+      margin: 50px 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-color: $color-default;
+      .pet {
+        max-height: 100px;
+        max-width: 100px;
+      }
+    }
+
+    .login {
+      padding: 30px 0;
+    }
+  }
+}

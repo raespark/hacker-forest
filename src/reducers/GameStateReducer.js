@@ -7,7 +7,9 @@ const defaultState = {
     timeRemaining: 0,
     collectedFlags: 0,
     musicEnabled: false,
-    ghostTownCompleted: false
+    ghostTownCompleted: false,
+    petParadeCatsCompleted: false,
+    petParadePasswordCompleted: false
 }
 
 export default handleActions({
@@ -55,7 +57,19 @@ export default handleActions({
     [actions.finishedGhostTown] (state) {
         return {
             ...state,
-            ghostTownCompleted: !state.finishedGhostTown
+            ghostTownCompleted: true
+        }
+    },
+    [actions.finishedPetParadeCats] (state) {
+        return {
+            ...state,
+            petParadeCatsCompleted: true
+        }
+    },
+    [actions.finishedPetParadePassword] (state) {
+        return {
+            ...state,
+            petParadePasswordCompleted: true
         }
     }
 }, defaultState);

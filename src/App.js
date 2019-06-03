@@ -38,6 +38,8 @@ function App(props) {
         <div className="App">
           <ToolContainer>
             <Route exact path="/" component={Home} />
+            <Route exact path="/credits" component={Credits}/>
+
             <ProtectedRoute exact authed={isGameRunning} path="/binary" component={BinaryBasics}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks" component={LifeHacks}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks/read-more" component={ReadMore}/>
@@ -45,7 +47,6 @@ function App(props) {
             <ProtectedRoute exact authed={isGameRunning} path="/encode" component={Encode}/>
             <ProtectedRoute exact authed={isGameRunning} path="/petparade" component={PetParade}/>
             <ProtectedRoute exact authed={isGameRunning} path="/brightbulbs" component={BrightBulb}/>
-            <Route exact path="/credits" component={Credits}/>
           </ToolContainer>
           <FlagPopup />
         </div>

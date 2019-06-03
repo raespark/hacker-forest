@@ -1,0 +1,36 @@
+@import "components/variables.scss";
+
+.translator {
+    .translator-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 250px;
+
+        textarea {
+            flex: 1 0 auto;
+            resize: none;
+            margin: 20px;
+            border: 1px solid $color-default;
+            color: $color-default;
+            background-color: $color-darkest;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .translator-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            i {
+                margin: 10px 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-lightest;
+                }
+            }
+        }
+    }
+}

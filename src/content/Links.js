@@ -8,8 +8,8 @@ export default [
         route: "/binary"
     },
     {
-        name: "Etc",
-        route: "#"
+        name: "Life Hacks",
+        route: "/lifehacks"
     },
     {
         name: "Other Page #1",

@@ -1,0 +1,76 @@
+@import '../Variables.scss';
+
+.life-hacks {
+  font-family: "Georgia";
+  padding: 30px;
+  .header {
+    text-align: center;
+    padding: 0 20%;
+
+    h1{
+      background-color: $color-default;
+      color: $color-lightest;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+  }
+
+  &.read-more {
+    text-align: center;
+    .hack{
+      font-size: 50px;
+    }
+
+    .back-link {
+      font-size: 20px;
+      color: $color-accent;
+      
+      :visited {
+        color: $color-default;
+      }
+    }
+  }
+
+  .body {
+    .hack {
+      background-color: $color-light;
+      border-radius: 10px;
+      margin: 40px;
+      padding: 30px;
+
+      hr {
+        border-color: $color-darkest;
+      }
+
+      .hack-title {
+        margin: 0;
+      }
+
+      .hack-image-container {
+        text-align: center;
+
+        .hack-image {
+          margin: 0 auto;
+          max-height: 400px;
+        }
+      }
+
+      .hack-text {
+        font-size: 18px;
+        padding-top: 10px;
+      }
+
+      .read-more {
+        text-align: center;
+        color: $color-accent;
+
+        .read-more-link:hover{
+          color: $color-dark;
+        }
+        .read-more-link:visited {
+          color: $color-default;
+        }
+      }
+    }
+  }
+}

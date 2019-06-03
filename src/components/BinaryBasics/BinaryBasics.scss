@@ -2,8 +2,8 @@
 
 .binary-basics {
   padding: 20px;
-  font-family: 'Nova flat', monospace;
-  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 15px;
   text-align: justify;
 
   .bordered-area {
@@ -21,7 +21,7 @@
     padding: 0 50px 20px 50px;
 
     h3 {
-      font-size: 25px;
+      font-size: 20px;
       margin-top: 50px;
       text-decoration: underline;
     }
@@ -34,7 +34,7 @@
     .example{
       text-align: center;
       color: $color-dark;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: bold;
     };
   }

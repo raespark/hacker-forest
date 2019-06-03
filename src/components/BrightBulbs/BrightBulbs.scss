@@ -1,0 +1,43 @@
+@import '../Variables.scss';
+
+.bright-bulbs {
+  .header {
+    text-align: center;
+    padding: 30px;
+
+    .logo {
+      max-width: 400px;
+    }
+
+    .bulb-removed {
+      position: relative;
+      .logo {
+        max-width: 400px;
+      }
+      .draggable {
+        display: inline;
+        max-width: 150px;
+        .logo-bulb {
+          max-width: 150px;
+        }
+      }
+    }
+
+  }
+
+  .body {
+    .lamps {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      
+      .lamp {
+        max-height: 200px;
+        max-width: 150px;
+      }
+    }
+
+  }
+}

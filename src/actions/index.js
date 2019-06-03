@@ -17,3 +17,5 @@ export const toggleMuteMusic = createAction("TOGGLE_MUTE_MUSIC");
 
 export const showFlagPopup = createAction("SHOW_FLAG_POPUP");
 export const hideFlagPopup = createAction("HIDE_FLAG_POPUP");
+
+export const finishedGhostTown = createAction("FINISHED_GHOST_TOWN");

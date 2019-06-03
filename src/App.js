@@ -5,6 +5,7 @@ import Home from 'components/HomePage';
 import BinaryBasics from 'components/BinaryBasics';
 import LifeHacks from 'components/LifeHacks';
 import ReadMore from 'components/LifeHacks/ReadMore';
+import GhostTown from 'components/GhostTown';
 
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/binary" component={BinaryBasics}/>
             <Route exact path="/lifehacks" component={LifeHacks}/>
             <Route exact path="/lifehacks/read-more" component={ReadMore}/>
+            <Route exact path="/ghosttown" component={GhostTown}/>
           </ToolContainer>
           <FlagPopup />
         </div>

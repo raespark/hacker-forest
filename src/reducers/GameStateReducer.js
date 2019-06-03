@@ -14,7 +14,7 @@ export default handleActions({
         return {
             ...state,
             currentGameState: GameStates.RUNNING,
-            timeRemaining: 30,
+            timeRemaining: 600,
             collectedFlags: 0
         }
     },

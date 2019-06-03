@@ -1,0 +1,44 @@
+@import "../variables.scss";
+
+.ghost-town {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+
+  .header {
+    text-align: center;
+    padding: 30px;
+
+    .logo {
+      max-width: 400px;
+    }
+  }
+
+  .body {
+    text-align: center;
+    padding: 10px;
+
+    .body-text {
+      background-color: white;
+      margin: 10px 20%;
+      padding: 50px 10px 10px 10px;
+      border-radius: 10px;
+      .hidden {
+        color: white;
+      }
+    }
+
+    .sand {
+      width: 100%;
+      &.zapped {
+        display: none;
+      }
+    }
+
+    .ghost-town-password {
+      display: none;
+      &.zapped {
+        display: flex;
+      }
+    }
+  }
+}

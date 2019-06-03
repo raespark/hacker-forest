@@ -9,7 +9,6 @@ const mapStateToProps = ({ tools: { hasToolEnabled, currentTool } }) => ({
 });
 
 const onZapperDivClick = (hasToolEnabled, currentTool, enabled, onZap) => {
-    console.log('ZAPP PLS');
     if (enabled && hasToolEnabled && currentTool.name === "Zapper" && typeof(onZap) === 'function') {
         onZap();
     }

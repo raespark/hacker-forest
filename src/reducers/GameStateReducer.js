@@ -9,7 +9,10 @@ const defaultState = {
     musicEnabled: false,
     ghostTownCompleted: false,
     petParadeCatsCompleted: false,
-    petParadePasswordCompleted: false
+    petParadePasswordCompleted: false,
+    lampFixedBrightBulb :false,
+    brightBulbLampsCompleted :false,
+    brightBulbMessageCompleted :false
 }
 
 export default handleActions({
@@ -78,6 +81,24 @@ export default handleActions({
         return {
             ...state,
             petParadePasswordCompleted: true
+        }
+    },
+    [actions.lampFixedBrightBulb] (state) {
+        return {
+            ...state,
+            lampFixedBrightBulb: true
+        }
+    },
+    [actions.finshedBrightBulbLamps] (state) {
+        return {
+            ...state,
+            brightBulbLampsCompleted: true
+        }
+    },
+    [actions.finishedBrightBulbMessage] (state) {
+        return {
+            ...state,
+            brightBulbMessageCompleted: true
         }
     }
 }, defaultState);

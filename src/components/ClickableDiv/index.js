@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classnames from 'classnames';
 
 class ClickableDiv extends Component {
 
@@ -20,7 +21,7 @@ class ClickableDiv extends Component {
   }
 
   render (){
-    return <div onClick={this.state.clicked? ()=>{} : this.handleClick}>
+    return <div className={classnames(this.props.className, {'clicked': this.state.clicked})} onClick={this.state.clicked? ()=>{} : this.handleClick}>
         {this.props.children}
       </div>
   }

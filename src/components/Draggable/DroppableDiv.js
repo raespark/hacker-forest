@@ -22,6 +22,7 @@ const onDragOverHandler = (e) => {
 const onDropHandler = (onDrop, e) => {
     if (e.dataTransfer.getData("type") === "draggable-div" && typeof (onDrop) === 'function') {
         onDrop(e.dataTransfer.getData("draggableId"));
+        e.preventDefault();
     }
 }
 

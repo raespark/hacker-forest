@@ -8,6 +8,7 @@ import ReadMore from 'components/LifeHacks/ReadMore';
 import GhostTown from 'components/GhostTown';
 import Encode from 'components/Encode';
 import PetParade from 'components/PetParade';
+import BrightBulb from 'components/BrightBulbs';
 
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/ghosttown" component={GhostTown}/>
             <Route exact path="/encode" component={Encode}/>
             <Route exact path="/petparade" component={PetParade}/>
+            <Route exact path="/brightbulbs" component={BrightBulb}/>
           </ToolContainer>
           <FlagPopup />
         </div>

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classnames from 'classnames';
 
 import './PasswordBox.scss';
 import Button from 'components/Button';
@@ -31,9 +32,10 @@ class PasswordBox extends Component {
 
   render() {
     return (
-      <div className={'password-box ' + this.props.className}>
-        <input className="password-input" value={this.state.input} onChange={this.handleChange} readOnly={!this.props.enabled}/>
-        <Button className="password-submit-button" disabled={!this.props.enabled} label="submit" onClick={this.checkPassword}/>
+      <div className={classnames('password-box', {multiline: this.props.multiline},this.props.className)}>
+        {!this.props.multiline && <input className="password-input" value={this.state.input} onChange={this.handleChange} readOnly={!this.props.enabled}/>}
+        {this.props.multiline && <textarea className="password-input" value={this.state.input} onChange={this.handleChange} readOnly={!this.props.enabled}/>}
+        <Button className="password-submit-button" disabled={!this.props.enabled} label="Submit" onClick={this.checkPassword}/>
       </div>
     )}
 }

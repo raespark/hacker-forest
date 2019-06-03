@@ -23,3 +23,7 @@ export const hideFlagPopup = createAction("HIDE_FLAG_POPUP");
 export const finishedGhostTown = createAction("FINISHED_GHOST_TOWN");
 export const finishedPetParadeCats = createAction("FINISHED_PET_PARADE_CATS");
 export const finishedPetParadePassword = createAction("FINISHED_PET_PARADE_PASSWORD");
+
+export const lampFixedBrightBulb = createAction("LAMP_FIXED_BRIGHT_BULB");
+export const finshedBrightBulbLamps = createAction("FINSHED_BRIGHT_BULB_LAMPS");
+export const finishedBrightBulbMessage = createAction("FINISHED_BRIGHT_BULB_MESSAGE");

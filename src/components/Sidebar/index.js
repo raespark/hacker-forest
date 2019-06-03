@@ -12,14 +12,16 @@ import Tools from 'content/Tools';
 import Timer from 'components/Timer';
 import Flags from 'components/Flags';
 import './Sidebar.scss';
+import GameStates from 'content/GameStates';
 
-const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription }, gameState: {collectedFlags, musicEnabled} }) => ({
+const mapStateToProps = ({ tools: { hasToolEnabled, currentTool, toolName, toolDescription }, gameState: {collectedFlags, musicEnabled, currentGameState} }) => ({
     hasToolEnabled,
     currentTool,
     toolName,
     toolDescription,
     collectedFlags,
-    musicEnabled
+    musicEnabled,
+    currentGameState
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -33,6 +35,8 @@ const Sidebar = (props) => {
         icon: props.musicEnabled ? "volume-down" : "volume-off"
     }
 
+    const isGameRunning = props.currentGameState === GameStates.RUNNING;
+
     return (
         <div className="sidebar">
             <div className="section title">
@@ -40,7 +44,7 @@ const Sidebar = (props) => {
             </div>
             <div className="section links">
                 <ul>
-                    {Links.map(link => <li key={link.name}><Link to={link.route}>{link.name}</Link></li>)}
+                    {Links.map(link => <li key={link.name}><Link to={isGameRunning ? link.route : '/'}>{link.name}</Link></li>)}
                 </ul>
             </div>
             <div className="section tools">

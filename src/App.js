@@ -1,6 +1,10 @@
 import React from 'react';
-import ScrollToTop from 'components/ScrollToTop';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { connect } from 'react-redux';
 
+import ScrollToTop from 'components/ScrollToTop';
+import ToolContainer from 'components/ToolContainer';
+import ProtectedRoute from 'components/ProtectedRoute';
 import Home from 'components/HomePage';
 import BinaryBasics from 'components/BinaryBasics';
 import LifeHacks from 'components/LifeHacks';
@@ -13,14 +17,18 @@ import BrightBulb from 'components/BrightBulbs';
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
 import FlagPopup from 'components/FlagPopup';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import ToolContainer from 'components/ToolContainer';
+import GameStates from 'content/GameStates';
 
 import './App.scss';
 
+const mapStateToProps = ({  gameState: {currentGameState} }) => ({
+  currentGameState
+});
 
-function App() {
+function App(props) {
+  const isGameRunning = props.currentGameState === GameStates.RUNNING;
+
   return (
     <Router>
       <Music src="misuse-by-kevin-macleod.ogg" />
@@ -29,13 +37,14 @@ function App() {
         <div className="App">
           <ToolContainer>
             <Route exact path="/" component={Home} />
-            <Route exact path="/binary" component={BinaryBasics}/>
-            <Route exact path="/lifehacks" component={LifeHacks}/>
-            <Route exact path="/lifehacks/read-more" component={ReadMore}/>
-            <Route exact path="/ghosttown" component={GhostTown}/>
-            <Route exact path="/encode" component={Encode}/>
-            <Route exact path="/petparade" component={PetParade}/>
-            <Route exact path="/brightbulbs" component={BrightBulb}/>
+
+            <ProtectedRoute exact authed={isGameRunning} path="/binary" component={BinaryBasics}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/lifehacks" component={LifeHacks}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/lifehacks/read-more" component={ReadMore}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/ghosttown" component={GhostTown}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/encode" component={Encode}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/petparade" component={PetParade}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/brightbulbs" component={BrightBulb}/>
           </ToolContainer>
           <FlagPopup />
         </div>
@@ -44,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);

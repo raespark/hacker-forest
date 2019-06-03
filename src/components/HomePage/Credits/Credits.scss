@@ -1,0 +1,40 @@
+@import "../../variables.scss";
+
+.content {
+  padding: 20px;
+  .game-credits {
+    font-family: "Courier New", Courier, monospace;
+    padding: 20px 50px;
+    margin: 10px 0;
+    background-color: black;
+    color: $color-default;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+
+    .header {
+      text-decoration: underline;
+    }
+    
+    .credit {
+      padding: 10px 20px;
+      h3 {
+        text-decoration: underline;
+      }
+    }
+
+    .link {
+      color: $color-dark;
+      
+      &:visited {
+        color: $color-darkest;
+      }
+
+      &:hover {
+        font-weight: bold;
+        color: $color-default;
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(actions, dispatch)
 })
 
-class BrightBulbs extends Component {
+class SafeNSound extends Component {
 
   constructor(props) {
     super(props);
@@ -77,4 +77,4 @@ class BrightBulbs extends Component {
     )}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BrightBulbs);
+export default connect(mapStateToProps, mapDispatchToProps)(SafeNSound);

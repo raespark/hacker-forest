@@ -1,5 +1,4 @@
 import { createAction } from 'redux-actions';
-import { create } from 'istanbul-reports';
 
 export const toggleTool = createAction("TOGGLE_TOOL", (tool) => ({tool}));
 export const showToolDescription = createAction("SHOW_TOOL_DESCRIPTION", (tool) => ({name: tool.name, description: tool.description}));

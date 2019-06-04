@@ -13,6 +13,7 @@ import GhostTown from 'components/GhostTown';
 import Encode from 'components/Encode';
 import PetParade from 'components/PetParade';
 import BrightBulb from 'components/BrightBulbs';
+import NotePad from 'components/NotePad';
 import Credits from 'components/HomePage/Credits';
 
 import SideBar from 'components/Sidebar';
@@ -40,6 +41,7 @@ function App(props) {
             <Route exact path="/" component={Home} />
             <Route exact path="/credits" component={Credits}/>
 
+            <ProtectedRoute exact authed={isGameRunning} path="/notepad" component={NotePad}/>
             <ProtectedRoute exact authed={isGameRunning} path="/binary" component={BinaryBasics}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks" component={LifeHacks}/>
             <ProtectedRoute exact authed={isGameRunning} path="/lifehacks/read-more" component={ReadMore}/>

@@ -4,6 +4,10 @@ export default [
         route: "/"
     },
     {
+        name: "Notepad",
+        route: "/notepad"
+    },
+    {
         name: "Life Hacks",
         route: "/lifehacks"
     },

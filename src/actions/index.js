@@ -27,3 +27,5 @@ export const finishedPetParadePassword = createAction("FINISHED_PET_PARADE_PASSW
 export const lampFixedBrightBulb = createAction("LAMP_FIXED_BRIGHT_BULB");
 export const finshedBrightBulbLamps = createAction("FINSHED_BRIGHT_BULB_LAMPS");
 export const finishedBrightBulbMessage = createAction("FINISHED_BRIGHT_BULB_MESSAGE");
+
+export const updateNotes = createAction("UPDATE_NOTES", (notes) => ({notes}));

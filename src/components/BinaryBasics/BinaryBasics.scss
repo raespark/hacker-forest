@@ -29,6 +29,10 @@
     .clue {
       color: $color-accent;
       font-weight: bold;
+
+      &::selection {
+        background-color: $color-darkest;
+      }
     }
 
     .example{

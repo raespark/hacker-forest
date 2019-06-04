@@ -24,6 +24,10 @@
       border-radius: 10px;
       .hidden {
         color: white;
+        &::selection {
+          color: white;
+          background: $color-darkest;
+        }
       }
     }
 

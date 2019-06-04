@@ -1,0 +1,51 @@
+@import '../Variables.scss';
+
+.safe-n-sound {
+  font-family: "Impact", sans-serif;
+  .header {
+    text-align: center;
+    padding: 20px;
+
+    .logo {
+      max-width: 400px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+  }
+
+  .body {
+    padding: 0 20px;
+    font-size: 15px;
+    text-align: center;
+    
+    .safe{
+      margin: 10px 20px 50px 20px;
+
+      .safe-image {
+        max-height: 500px;
+      }
+
+      .safe-note {
+        text-align: center;
+        background-color: white;
+        margin: 50px 30%;
+        padding: 100px 50px;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    }
+
+    h1 {
+      font-size: 30px
+    }
+    
+    h3 {
+      font-size: 20px;
+    }
+
+    .sales-pitch {
+      padding: 30px;
+    }
+  }
+}

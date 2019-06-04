@@ -29,3 +29,6 @@ export const finshedBrightBulbLamps = createAction("FINSHED_BRIGHT_BULB_LAMPS");
 export const finishedBrightBulbMessage = createAction("FINISHED_BRIGHT_BULB_MESSAGE");
 
 export const updateNotes = createAction("UPDATE_NOTES", (notes) => ({notes}));
+
+export const openedSafeSafeNSound = createAction("OPENED_SAFE_SAFE_N_SOUND");
+export const finishedSafeNSound = createAction("FINISHED_SAFE_N_SOUND");

@@ -13,7 +13,12 @@ const defaultState = {
     lampFixedBrightBulb :false,
     brightBulbLampsCompleted :false,
     brightBulbMessageCompleted :false,
+<<<<<<< HEAD
     notes:''
+=======
+    safeOpenedSafeNSound: false,
+    safeNSoundCompleted: false
+>>>>>>> safe n sound puzzles
 }
 
 export default handleActions({
@@ -106,6 +111,18 @@ export default handleActions({
         return {
             ...state,
             notes
+        }
+    },
+    [actions.openedSafeSafeNSound] (state) {
+        return {
+            ...state,
+            safeOpenedSafeNSound: true
+        }
+    },
+    [actions.finishedSafeNSound] (state) {
+        return {
+            ...state,
+            safeNSoundCompleted: true
         }
     }
 }, defaultState);

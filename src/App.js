@@ -15,6 +15,7 @@ import PetParade from 'components/PetParade';
 import BrightBulb from 'components/BrightBulbs';
 import NotePad from 'components/NotePad';
 import Credits from 'components/HomePage/Credits';
+import SafeNSound from 'components/SafeNSound';
 
 import SideBar from 'components/Sidebar';
 import Music from 'components/Music';
@@ -49,6 +50,7 @@ function App(props) {
             <ProtectedRoute exact authed={isGameRunning} path="/encode" component={Encode}/>
             <ProtectedRoute exact authed={isGameRunning} path="/petparade" component={PetParade}/>
             <ProtectedRoute exact authed={isGameRunning} path="/brightbulbs" component={BrightBulb}/>
+            <ProtectedRoute exact authed={isGameRunning} path="/safensound" component={SafeNSound}/>
           </ToolContainer>
           <FlagPopup />
         </div>

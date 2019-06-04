@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
+
 import Digit from './Digit';
+import Utils from 'Utils';
 
 import './SafeLock.scss';
-import Utils from 'Utils';
 
 class SafeLock extends Component {
 
@@ -62,9 +64,9 @@ class SafeLock extends Component {
 
     render() {
         return (
-            <div className="safe-lock">
+            <div className={classnames('safe-lock', {enabled: this.props.enabled}, this.props.className)}>
                 {Utils.range(this.state.digits.length).map(i => 
-                    <Digit value={this.state.digits[i]} key={`digit-${i}`} onDigitUp={this.onDigitUp.bind(this,i)} onDigitDown={this.onDigitDown.bind(this,i)}/>
+                    <Digit value={this.state.digits[i]} key={`digit-${i}`} onDigitUp={this.props.enabled ? this.onDigitUp.bind(this,i) : () => {}} onDigitDown={this.props.enabled ? this.onDigitDown.bind(this,i): () => {}}/>
                 )}
             </div>
         );

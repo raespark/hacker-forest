@@ -17,9 +17,7 @@ class SafeLock extends Component {
             digits: this.parseDigits(props.initialValue, length),
             keyDigits: this.parseDigits(props.unlockValue, length)
         };
-
-        console.log(this.state.digits.length);
-
+        
         this.onDigitUp = this.onDigitUp.bind(this);
         this.onDigitDown = this.onDigitDown.bind(this);
         this.checkDigits = this.checkDigits.bind(this);

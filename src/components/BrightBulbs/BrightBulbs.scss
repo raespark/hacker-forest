@@ -55,6 +55,11 @@
 
       &.invisible {
         color: $color-lightest;
+
+        &::selection {
+          color: white;
+          background-color: $color-darkest;
+        }
       }
 
       &.small {

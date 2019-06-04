@@ -12,7 +12,8 @@ const defaultState = {
     petParadePasswordCompleted: false,
     lampFixedBrightBulb :false,
     brightBulbLampsCompleted :false,
-    brightBulbMessageCompleted :false
+    brightBulbMessageCompleted :false,
+    notes:''
 }
 
 export default handleActions({
@@ -99,6 +100,12 @@ export default handleActions({
         return {
             ...state,
             brightBulbMessageCompleted: true
+        }
+    },
+    [actions.updateNotes] (state, {payload: {notes}}) {
+        return {
+            ...state,
+            notes
         }
     }
 }, defaultState);

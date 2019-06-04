@@ -1,0 +1,28 @@
+@import "components/variables.scss";
+
+.notepad{
+    background-color: black;
+    text-align:center;
+
+    .body {
+        padding: 20px 5%;
+        background-color: black;
+        color: $color-default;
+        border-radius: 10px;
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 300px;
+        color: $color-default;
+        background-color: black;
+        border: 1px solid $color-default;
+        border-radius: 0.5rem;
+        padding: 10px;
+        font-size: 18px;
+        resize:vertical;
+    }
+}

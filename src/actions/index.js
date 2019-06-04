@@ -1,4 +1,5 @@
 import { createAction } from 'redux-actions';
+import { create } from 'istanbul-reports';
 
 export const toggleTool = createAction("TOGGLE_TOOL", (tool) => ({tool}));
 export const showToolDescription = createAction("SHOW_TOOL_DESCRIPTION", (tool) => ({name: tool.name, description: tool.description}));
@@ -27,3 +28,5 @@ export const finishedPetParadePassword = createAction("FINISHED_PET_PARADE_PASSW
 export const lampFixedBrightBulb = createAction("LAMP_FIXED_BRIGHT_BULB");
 export const finshedBrightBulbLamps = createAction("FINSHED_BRIGHT_BULB_LAMPS");
 export const finishedBrightBulbMessage = createAction("FINISHED_BRIGHT_BULB_MESSAGE");
+
+export const updateNotes = createAction("UPDATE_NOTES", (notes) => ({notes}));
